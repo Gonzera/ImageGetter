@@ -21,13 +21,13 @@ namespace Downloader
 
         public static void LogUrl(string url)
         {
-            string path = @"C:\temp\downloadedUrls.txt";
+            string path = @"C:\downloadedUrls.txt";
             File.AppendAllText(path, url + Environment.NewLine);
         }
 
         public static bool Downloaded(string url)
         {
-            var AlreadyDownloaded = File.ReadAllLines(@"C:\temp\downloadedUrls.txt");
+            var AlreadyDownloaded = File.ReadAllLines(@"C:\downloadedUrls.txt");
             
             if(AlreadyDownloaded.Contains(url))
             {

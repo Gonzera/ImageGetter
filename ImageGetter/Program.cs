@@ -9,8 +9,8 @@ namespace ImageGetter
     {
         static void Main(string[] args)
         {
-            if (!File.Exists(@"C:\temp\downloadedUrls.txt"))    
-                File.Create(@"C:\temp\downloadedUrls.txt");           //since i want to avoid writing one extra line in each downloader i will create the file here
+            if (!File.Exists(@"C:\downloadedUrls.txt"))    
+                File.Create(@"C:\downloadedUrls.txt");           //this way we can go over the same thread twice
 
 
             Console.Title = "IMAGE GETTER ALPHA 0.1";
